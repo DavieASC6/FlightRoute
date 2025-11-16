@@ -35,7 +35,7 @@ public class Main {
                 passMult = 0.33;
                 break;
             default:
-                System.out.println("Invalid mode, using default weights.");
+                System.out.println("Not an option.");
         	
         	}
         	
@@ -96,9 +96,9 @@ public class Main {
 	    
 	}
     private static double parseOrDefault(String factor, double defaultV) {
-        if (factor == null || factor.trim().isEmpty()) return defaultV;
+        if (factor == null || factor.isEmpty()) return defaultV;
         try {
-            return Double.parseDouble(factor.trim());
+            return Double.parseDouble(factor);
             
         } catch (Exception e) {
             System.out.println(e.getMessage());
@@ -109,4 +109,5 @@ public class Main {
     }
     
 }
+
 
